@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "5ba8ec29-d34c-42f8-990d-eae793478cbf",
+		"name": "Text Search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\" : \"abhit\",\n    \"title\" : \"title of the post1\",\n    \"content\" : \"content of the post1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/posts/create",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"posts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/posts/search?keyword=the&page=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"posts",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "the"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"ajit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/posts/update/3",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"posts",
+						"update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
